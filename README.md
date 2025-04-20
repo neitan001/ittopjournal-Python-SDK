@@ -87,12 +87,12 @@ print(schedule)
 
 ## 💡 Примеры
 
-## Получение оценок
+## Получение посещений и оценок
 ```python
 from ittopjournal import get_token, get_metric_grade_info
 
 token = get_token(...)
-grades = get_metric_grade_info(token)
+grades = get_student_visits_info(token)
 ```
 
 ## Обработка ошибок
