@@ -10,6 +10,7 @@ from .core import (
     get_rating_group_info_api as _get_rating_group_info_api,
     get_rating_stream_info_api as _get_rating_stream_info_api,
     get_student_visits_info_api as _get_student_visits_info_api,
+    get_schedule_api as _get_schedule_api,
 )
 
 __all__ = [
@@ -22,11 +23,13 @@ __all__ = [
     "get_rating_group_info",
     "get_rating_stream_info",
     "get_student_visits_info",
+    "get_schedule",
 ]
 
 def get_token(login: str, password: str, application_key: str):
     return request_auth_token(login, password, application_key)
 
+def get_schedule(token: str, date: str): return _get_schedule_api(token, date=date)
 def get_evaluation_lessons(token: str): return _get_evaluation_lessons_api(token)
 def get_user_info(token: str): return _get_user_info_api(token)
 def get_feedback_info(token: str): return _get_feedback_info_api(token)
