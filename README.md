@@ -89,7 +89,7 @@ print(schedule)
 
 ## Получение посещений и оценок
 ```python
-from ittopjournal import get_token, get_metric_grade_info
+from ittopjournal import get_token, get_student_visits_info
 
 token = get_token(...)
 grades = get_student_visits_info(token)
